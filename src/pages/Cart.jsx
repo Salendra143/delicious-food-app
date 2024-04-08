@@ -19,7 +19,7 @@ function Cart() {
 
             <div>
                 { cartItems.length > 0 ?
-                <p className='text-center text-[1.3rem] cursor-pointer ' onClick={clearhandler}>clear cart</p>
+                <p className='text-center text-[1.3rem] cursor-pointer active:text-red-600 ' onClick={clearhandler}>clear cart</p>
                 : <p></p> }
                 {cartItems.length === 0 && (
 

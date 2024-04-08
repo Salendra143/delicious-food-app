@@ -1,5 +1,5 @@
 import React from 'react'
-import { SwiggyImagesURl } from '../utlis/constants';
+import { Img_link } from '../utlis/api';
 
 function Outlet(props) {
     const {restobj} = props;
@@ -9,7 +9,7 @@ function Outlet(props) {
        
       <div className=' cursor-pointer w-[350px] h-[280px]   flex-none border-b-2 mb-3  ' >
         <div className=''>
-        <img  className=' hover:drop-shadow-2xl w-[270px] h-[160px] rounded-xl ' src={SwiggyImagesURl+ 
+        <img  className=' hover:drop-shadow-2xl w-[270px] h-[160px] rounded-xl ' src={Img_link+ 
         restobj.info.cloudinaryImageId} alt="" />
         </div>
         <h4 className='font-semibold text-[1.2rem] mt-2'>{restobj.info.name}</h4>

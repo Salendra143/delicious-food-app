@@ -2,8 +2,8 @@ import React from 'react'
 import Outlet from './Outlet'
 import  {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { SwiggyFetchMindAPI } from '../utlis/constants';
 import SkeletonCard from '../skeletion/SkeletonCard';
+import { Api_link } from '../utlis/api';
 
 function Outlets() {
   
@@ -16,7 +16,7 @@ function Outlets() {
 []);
 
     const fetchapi = async ()=>{
-            const data =  await fetch(SwiggyFetchMindAPI);
+            const data =  await fetch(Api_link);
             const json =  await data.json();
             setcarosel(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)                             
             

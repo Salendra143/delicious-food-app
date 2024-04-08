@@ -20,14 +20,15 @@ function RestaurantMenu() {
     const data = await fetch(Menu_link + resid);
     const json = await data.json();
     setrestMenu(json.data);
-   
   };
   if (restMenu === null) {
-    return <SkeletonCard />
+    return <SkeletonCard />;
   }
 
-  const { name, cuisines, costForTwoMessage } = restMenu?.cards[2]?.card?.card.info;
-  const category = restMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
+  const { name, cuisines, costForTwoMessage } =
+    restMenu?.cards[2]?.card?.card.info;
+  const category =
+    restMenu.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
